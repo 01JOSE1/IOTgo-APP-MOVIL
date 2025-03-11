@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Define la versión del XML y la codificación de caracteres (UTF-8). -->
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DrawerBaseActivity"
+    tools:openDrawer="start"
+    android:fitsSystemWindows="true">
+
+    <!--
+        DrawerLayout: Es un contenedor principal que permite agregar un menú lateral deslizable.
+        - xmlns:android: Define el espacio de nombres para los atributos estándar de Android.
+        - xmlns:app: Espacio de nombres para atributos personalizados de la biblioteca AndroidX.
+        - xmlns:tools: Se usa solo en herramientas de desarrollo (Android Studio) y no afecta la app en tiempo de ejecución.
+        - android:layout_width / layout_height: Ocupa todo el tamaño del contenedor padre.
+        - tools:context=".DrawerBaseActivity": Indica que este diseño está vinculado a la actividad DrawerBaseActivity.
+        - tools:openDrawer="start": Especifica que la vista previa en el editor de Android Studio mostrará el cajón abierto en el lado "start".
+        - android:fitsSystemWindows="true": Asegura que el contenido del layout se ajuste correctamente bajo la barra de estado y otros elementos del sistema.
+    -->
+
+    <include
+        layout="@layout/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--
+        <include>: Incluye otro archivo de diseño XML llamado "content_layout.xml".
+        - Esto se usa para mantener el código modular y separar la estructura de la actividad en diferentes archivos.
+        - match_parent: La vista incluida ocupará todo el espacio disponible del DrawerLayout.
+    -->
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/main_drawer_header"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@color/orange"
+        app:itemTextAppearance="@style/NavigationViewTextStyle"
+        app:itemTextColor="@color/blue"
+        app:itemVerticalPadding="15dp"
+        app:menu="@menu/main_drawer_menu">
+
+    <!--
+        NavigationView: Representa el menú lateral deslizante.
+        - android:id="@+id/nav_view": Asigna un ID al NavigationView para referenciarlo en el código Java/Kotlin.
+        - android:layout_width="300dp": Define el ancho del menú lateral (300dp).
+        - android:layout_height="match_parent": Ocupa toda la altura del contenedor padre.
+        - android:layout_gravity="start": Posiciona el menú en el lado izquierdo de la pantalla.
+        - android:background="@color/white": Establece el fondo del menú en color blanco.
+        - android:fitsSystemWindows="true": Permite que la vista se ajuste correctamente con la barra de estado.
+        - app:headerLayout="@layout/main_drawer_header": Incluye un encabezado personalizado desde "main_drawer_header.xml".
+        - app:itemIconSize="30dp": Ajusta el tamaño de los íconos del menú a 30dp.
+        - app:itemIconTint="@color/orange": Aplica color naranja a los íconos del menú.
+        - app:itemTextAppearance="@style/NavigationViewTextStyle": Aplica un estilo específico a los textos de los elementos del menú.
+        - app:itemTextColor="@color/blue": Define el color azul para los textos de los elementos del menú.
+        - app:itemVerticalPadding="15dp": Agrega un espaciado vertical de 15dp entre elementos del menú.
+        - app:menu="@menu/main_drawer_menu": Asigna el archivo de menú "main_drawer_menu.xml" que define los ítems del menú lateral.
+    -->
+
+    <!-- Contenedor para el botón "Salir" en la parte inferior -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/blue"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_salir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salir"
+            android:textSize="23dp"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:drawableLeft="@drawable/baseline_logout_24"
+            android:background="?attr/selectableItemBackground"
+            android:paddingStart="30dp"
+            android:paddingVertical="7dp"/>
+    </LinearLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

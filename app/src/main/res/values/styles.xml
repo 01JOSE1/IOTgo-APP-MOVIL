@@ -1,0 +1,10 @@
+<resources>
+    <style name="NavigationViewTextStyle" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">23sp</item> <!-- Tamaño de letra -->
+        <item name="android:textColor">@color/blue</item> <!-- Color azul -->
+        <item name="android:textStyle">bold</item> <!-- Texto en negrita -->
+    </style>
+
+
+</resources>
+

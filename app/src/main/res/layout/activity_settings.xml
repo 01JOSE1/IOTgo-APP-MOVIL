@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Define la versión del XML y la codificación en UTF-8 -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity"
+    android:background="@color/white">
+
+    <!--
+        ConstraintLayout: Contenedor principal que permite posicionar elementos con restricciones flexibles.
+        - xmlns:android: Espacio de nombres estándar de Android.
+        - xmlns:app: Espacio de nombres para atributos personalizados de ConstraintLayout.
+        - xmlns:tools: Espacio de nombres para herramientas de desarrollo en Android Studio.
+        - android:id="@+id/main": Identificador único para el ConstraintLayout.
+        - android:layout_width="match_parent": Ocupa todo el ancho disponible.
+        - android:layout_height="match_parent": Ocupa todo el alto disponible.
+        - tools:context=".SettingsActivity": Indica que este diseño pertenece a la actividad SettingsActivity.
+        - android:background="@color/white": Establece el fondo del layout en color blanco.
+    -->
+
+    <!-- Icono grande de Settings usando el vector nav_setting -->
+    <ImageView
+        android:id="@+id/icon_settings"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/nav_setting"
+        app:tint="@color/orange"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:contentDescription="Settings Icon" />
+
+    <!--
+        ImageView: Muestra un icono representando "Settings".
+        - android:id="@+id/icon_settings": Identificador único del ImageView.
+        - android:layout_width="100dp": Ancho del icono en 100dp.
+        - android:layout_height="100dp": Altura del icono en 100dp.
+        - android:src="@drawable/nav_setting": Usa la imagen vectorial "nav_setting".
+        - app:tint="@color/orange": Aplica un color naranja al icono.
+        - app:layout_constraintBottom_toBottomOf="parent": Fija la parte inferior del icono al borde inferior del contenedor.
+        - app:layout_constraintEnd_toEndOf="parent": Centra el icono horizontalmente en el contenedor.
+        - app:layout_constraintStart_toStartOf="parent": Alinea el icono con el inicio del contenedor.
+        - app:layout_constraintTop_toTopOf="parent": Fija la parte superior del icono al borde superior del contenedor.
+        - app:layout_constraintVertical_chainStyle="packed": Agrupa el icono con otros elementos verticalmente.
+        - android:contentDescription="Settings Icon": Proporciona una descripción accesible para lectores de pantalla.
+    -->
+
+    <!-- Texto "SETTINGS" en el centro -->
+    <TextView
+        android:id="@+id/title_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SETTINGS"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icon_settings"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!--
+        TextView: Muestra la palabra "SETTINGS".
+        - android:id="@+id/title_settings": Identificador único del TextView.
+        - android:layout_width="wrap_content": Ajusta el ancho al contenido del texto.
+        - android:layout_height="wrap_content": Ajusta la altura al contenido del texto.
+        - android:text="SETTINGS": Texto que se mostrará.
+        - android:textSize="28sp": Tamaño del texto en 28sp.
+        - android:textStyle="bold": Aplica negrita al texto.
+        - android:textColor="@color/blue": Aplica color azul al texto.
+        - app:layout_constraintBottom_toBottomOf="parent": Restringe el borde inferior del texto al borde inferior del contenedor.
+        - app:layout_constraintEnd_toEndOf="parent": Centra el texto horizontalmente.
+        - app:layout_constraintStart_toStartOf="parent": Alinea el texto con el inicio del contenedor.
+        - app:layout_constraintTop_toBottomOf="@id/icon_settings": Posiciona el texto justo debajo del icono.
+        - app:layout_constraintVertical_bias="0.0": Alinea el texto lo más arriba posible dentro de la restricción vertical.
+    -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Define la versión del XML y la codificación en UTF-8 -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SensorsActivity"
+    android:background="@color/white">
+
+    <!--
+        ConstraintLayout: Contenedor principal que permite posicionar elementos con restricciones flexibles.
+        - xmlns:android: Espacio de nombres estándar de Android.
+        - xmlns:app: Espacio de nombres para atributos personalizados de ConstraintLayout.
+        - xmlns:tools: Se usa para herramientas de desarrollo como Android Studio.
+        - android:id="@+id/main": Asigna un identificador único al ConstraintLayout.
+        - android:layout_width="match_parent": Ocupa todo el ancho disponible.
+        - android:layout_height="match_parent": Ocupa todo el alto disponible.
+        - tools:context=".SensorsActivity": Indica que este diseño está vinculado a SensorsActivity.
+        - android:background="@color/white": Establece un fondo blanco.
+    -->
+
+    <!-- Icono grande de Sensors usando el vector nav_sensors -->
+    <ImageView
+        android:id="@+id/icon_sensors"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/nav_sensors"
+        app:tint="@color/orange"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:contentDescription="Sensors Icon" />
+
+    <!--
+        ImageView: Muestra un icono representando "Sensors".
+        - android:id="@+id/icon_sensors": Identificador del ImageView.
+        - android:layout_width="100dp": Define un ancho fijo de 100dp.
+        - android:layout_height="100dp": Define una altura fija de 100dp.
+        - android:src="@drawable/nav_sensors": Usa la imagen vectorial "nav_sensors".
+        - app:tint="@color/orange": Aplica un color naranja al icono.
+        - app:layout_constraintBottom_toBottomOf="parent": Fija la parte inferior del icono al borde inferior del contenedor.
+        - app:layout_constraintEnd_toEndOf="parent": Centra horizontalmente el icono en el contenedor.
+        - app:layout_constraintStart_toStartOf="parent": Mantiene el icono alineado con el inicio del contenedor.
+        - app:layout_constraintTop_toTopOf="parent": Fija la parte superior del icono al borde superior del contenedor.
+        - app:layout_constraintVertical_chainStyle="packed": Agrupa el icono con otros elementos verticalmente.
+        - android:contentDescription="Sensors Icon": Proporciona una descripción accesible para lectores de pantalla.
+    -->
+
+    <!-- Texto "SENSORS" en el centro -->
+    <TextView
+        android:id="@+id/title_sensors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SENSORS"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icon_sensors"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!--
+        TextView: Muestra la palabra "SENSORS".
+        - android:id="@+id/title_sensors": Identificador del TextView.
+        - android:layout_width="wrap_content": Ajusta el ancho al contenido del texto.
+        - android:layout_height="wrap_content": Ajusta la altura al contenido del texto.
+        - android:text="SENSORS": Texto que se mostrará.
+        - android:textSize="28sp": Establece el tamaño del texto en 28sp.
+        - android:textStyle="bold": Hace que el texto se muestre en negrita.
+        - android:textColor="@color/blue": Aplica un color azul al texto.
+        - app:layout_constraintBottom_toBottomOf="parent": Restringe el borde inferior del texto al borde inferior del contenedor.
+        - app:layout_constraintEnd_toEndOf="parent": Centra el texto horizontalmente.
+        - app:layout_constraintStart_toStartOf="parent": Alinea el texto con el inicio del contenedor.
+        - app:layout_constraintTop_toBottomOf="@id/icon_sensors": Posiciona el texto justo debajo del icono.
+        - app:layout_constraintVertical_bias="0.0": Alinea el texto lo más arriba posible dentro de la restricción vertical.
+    -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

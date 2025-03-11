@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    android:gravity="center"
+    tools:context=".LoginActivity">
+
+    <!-- ConstraintLayout es el contenedor principal que permite posicionar elementos con restricciones -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:background="@drawable/custom_edittext"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.4">
+
+        <!-- CardView: Tarjeta contenedora del formulario de inicio de sesión -->
+        <!-- app:cardCornerRadius: Redondea las esquinas -->
+        <!-- app:cardElevation: Aplica una sombra alrededor del CardView -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- LinearLayout organiza los elementos en columna -->
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Inicio de Sesión"
+                android:textAlignment="center"
+                android:textColor="@color/orange"
+                android:textSize="37sp"
+                android:textStyle="bold" />
+
+            <!-- Título del formulario -->
+
+            <EditText
+                android:id="@+id/txtemail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/custom_edittext"
+                android:drawableStart="@drawable/baseline_person_24"
+                android:paddingStart="10dp"
+                android:drawablePadding="8dp"
+                android:hint="Correo Electrónico"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cardview_dark_background" />
+
+            <!-- Campo de entrada de correo electrónico con un icono al inicio -->
+
+            <EditText
+                android:id="@+id/txtcontraseña"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext"
+                android:drawableStart="@drawable/baseline_lock_24"
+                android:paddingStart="10dp"
+                android:drawablePadding="8dp"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cardview_dark_background" />
+
+            <!-- Campo de entrada de contraseña con icono de candado al inicio -->
+
+
+            <TextView
+                android:id="@+id/txtolvidecontraseña"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¿Olvidaste tu contraseña?"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <!-- Enlace para recuperar la contraseña -->
+
+
+            <Button
+                android:id="@+id/btningresar"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/orange"
+                android:text="INICIAR SESION"
+                android:textSize="20sp"
+                app:cornerRadius="20dp"
+                android:textColor="@color/white"/>
+
+            <!-- Botón de inicio de sesión -->
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/msgregistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿Aún no estás registrado?"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/cardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Mensaje de registro -->
+
+
+    <TextView
+        android:id="@+id/lblregistrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¡Regístrate ahora!"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:layout_marginTop="-2dp"
+        app:layout_constraintTop_toBottomOf="@id/msgregistro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+    <!-- Enlace para registrarse -->
+
+
+    <LinearLayout
+        android:id="@+id/msgor"
+        app:layout_constraintTop_toBottomOf="@id/lblregistrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Línea divisoria con texto "O" -->
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:background="@color/white"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="O"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:paddingHorizontal="8dp"/>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:background="@color/white"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/msgor">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inicia sesión con:"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Texto indicando opciones de inicio de sesión -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btn_facebook"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="fitCenter"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/facebook"
+                android:contentDescription="Iniciar sesión con Facebook" />
+
+            <Space
+                android:layout_width="16dp"
+                android:layout_height="1dp"/>
+
+            <ImageButton
+                android:id="@+id/btn_email"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="fitCenter"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/gmail"
+                android:contentDescription="Iniciar sesión con Google" />
+
+            <Space
+                android:layout_width="16dp"
+                android:layout_height="1dp"/>
+
+            <ImageButton
+                android:id="@+id/btn_outlook"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="fitCenter"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/outlook"
+                android:contentDescription="Iniciar sesión con Outlook" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

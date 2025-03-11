@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Define la versión del XML y la codificación de caracteres en UTF-8 -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DrawerBaseActivity"
+    android:background="@color/white">
+
+    <!--
+        ConstraintLayout: Es el contenedor principal del diseño, permitiendo posicionar elementos con restricciones flexibles.
+        - xmlns:android: Define el espacio de nombres estándar de Android.
+        - xmlns:app: Define el espacio de nombres para atributos personalizados de ConstraintLayout.
+        - xmlns:tools: Se usa solo en herramientas de desarrollo como Android Studio.
+        - android:id="@+id/main": Asigna un identificador único al ConstraintLayout.
+        - android:layout_width="match_parent": Ocupa todo el ancho disponible.
+        - android:layout_height="match_parent": Ocupa todo el alto disponible.
+        - tools:context=".DrawerBaseActivity": Indica que este diseño está vinculado a la actividad DrawerBaseActivity.
+        - android:background="@color/white": Establece un fondo blanco para la pantalla.
+    -->
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="320dp"
+        android:layout_height="260dp"
+        android:contentDescription="Logo"
+        android:src="@drawable/fondoinicio"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <!--
+        ImageView: Muestra una imagen en la pantalla.
+        - android:id="@+id/img_logo": Identificador del ImageView.
+        - android:layout_width="320dp": Define un ancho fijo de 320dp.
+        - android:layout_height="260dp": Define una altura fija de 260dp.
+        - android:contentDescription="Logo": Proporciona una descripción accesible para usuarios con discapacidades visuales.
+        - android:src="@drawable/fondoinicio": Asigna la imagen "fondoinicio" desde los recursos drawable.
+        - app:layout_constraintBottom_toBottomOf="parent": Fija la parte inferior de la imagen al borde inferior del contenedor.
+        - app:layout_constraintEnd_toEndOf="parent": Centra horizontalmente la imagen en el contenedor.
+        - app:layout_constraintStart_toStartOf="parent": Mantiene la imagen alineada con el inicio del contenedor.
+        - app:layout_constraintTop_toTopOf="parent": Fija la parte superior de la imagen al borde superior del contenedor.
+        - app:layout_constraintVertical_chainStyle="packed": Agrupa la imagen de forma compacta con otros elementos verticalmente.
+    -->
+
+    <TextView
+        android:id="@+id/txt_bienvenida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¡Bienvenido!"
+        android:textColor="@color/blue"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_logo"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!--
+        TextView: Muestra un mensaje de bienvenida en la pantalla.
+        - android:id="@+id/txt_bienvenida": Identificador del TextView.
+        - android:layout_width="wrap_content": Ajusta el ancho al contenido del texto.
+        - android:layout_height="wrap_content": Ajusta la altura al contenido del texto.
+        - android:text="¡Bienvenido!": Define el texto que se mostrará.
+        - android:textColor="@color/blue": Aplica un color azul al texto.
+        - android:textSize="30sp": Establece el tamaño del texto en 30sp.
+        - android:textStyle="bold": Hace que el texto se muestre en negrita.
+        - app:layout_constraintBottom_toBottomOf="parent": Restringe el borde inferior del texto al borde inferior del contenedor.
+        - app:layout_constraintEnd_toEndOf="parent": Centra el texto horizontalmente en el contenedor.
+        - app:layout_constraintStart_toStartOf="parent": Mantiene el texto alineado con el inicio del contenedor.
+        - app:layout_constraintTop_toBottomOf="@id/img_logo": Ubica el texto justo debajo de la imagen.
+        - app:layout_constraintVertical_bias="0.0": Posiciona el texto lo más arriba posible dentro de su restricción vertical.
+    -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

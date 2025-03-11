@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Archivo de menú XML utilizado para definir un menú de navegación.
+    Se declara el elemento <menu> como contenedor principal.
+    Se especifica el espacio de nombres XML para los atributos de Android.
+-->
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <!--
+        Grupo de elementos de menú con comportamiento "checkable" (seleccionable).
+        El atributo android:checkableBehavior="single" indica que solo un elemento del grupo
+        puede estar seleccionado a la vez, lo que es útil en un menú de navegación.
+    -->
+    <group android:checkableBehavior="single">
+
+        <!--
+            Opción de menú para la pantalla principal ("Home").
+            Tiene un identificador único (@+id/nav_home).
+            Se le asigna un icono de recurso llamado "nav_home".
+            El título visible en la interfaz será "Home".
+        -->
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/nav_home"
+            android:title="Home"
+            />
+
+        <!--
+            Opción de menú para la sección de sensores ("Sensors").
+            Tiene un identificador único (@+id/nav_sensors).
+            Se le asigna un icono de recurso llamado "nav_sensors".
+            El título visible en la interfaz será "Sensors".
+        -->
+        <item
+            android:id="@+id/nav_sensors"
+            android:icon="@drawable/nav_sensors"
+            android:title="Sensors"
+            />
+
+        <!--
+            Opción de menú para la configuración ("Settings").
+            Tiene un identificador único (@+id/nav_settings).
+            Se le asigna un icono de recurso llamado "nav_setting".
+            El título visible en la interfaz será "Settings".
+        -->
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/nav_setting"
+            android:title="Settings" />
+
+    </group>
+
+
+</menu>

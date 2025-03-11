@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Se define un LinearLayout como contenedor principal del diseño.
+    Este usa un diseño vertical y ocupa todo el ancho y alto de la pantalla.
+    Su fondo es de color blanco.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!--
+        Este LinearLayout interno actúa como una cabecera.
+        Tiene una altura fija de 200dp y ocupa todo el ancho del contenedor principal.
+        Su orientación es vertical y alinea su contenido en la parte inferior (gravity="bottom").
+        Además, tiene un padding de 16dp y un fondo personalizado definido en "fondoheader".
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:padding="16dp"
+        android:background="@drawable/fondoheader">
+
+        <!--
+            ImageView que muestra una imagen de usuario.
+            Su tamaño es de 96dp de ancho por 79dp de alto.
+            Se coloca una imagen de recurso llamada "user".
+            Se establece un margen inferior de 15dp para separar la imagen del siguiente elemento.
+        -->
+        <ImageView
+            android:layout_width="96dp"
+            android:layout_height="79dp"
+            android:src="@drawable/user"
+            android:layout_marginBottom="15dp" />
+
+        <!--
+            TextView que muestra el nombre de la empresa "IOTSOLUTIONS".
+            El texto tiene un tamaño de 20dp, es de color blanco y tiene estilo en negrita.
+        -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IOTSOLUTIONS"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+        <!--
+            TextView que muestra el correo de la empresa.
+            El texto tiene un tamaño de 17dp, es de color blanco y tiene estilo en negrita.
+        -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="solutionsiot@gmail.com"
+            android:textSize="17dp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

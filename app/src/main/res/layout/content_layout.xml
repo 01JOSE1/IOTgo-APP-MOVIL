@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Define la versión del XML y la codificación en UTF-8 -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--
+        ConstraintLayout: Contenedor principal que permite organizar elementos de forma flexible.
+        - xmlns:android: Espacio de nombres estándar de Android.
+        - xmlns:app: Espacio de nombres para atributos personalizados de ConstraintLayout.
+        - android:layout_width="match_parent": Ocupa todo el ancho disponible.
+        - android:layout_height="match_parent": Ocupa todo el alto disponible.
+    -->
+
+    <!-- AppBarLayout: Contenedor para la barra de herramientas (Toolbar) -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--
+            AppBarLayout: Sirve para colocar elementos como la Toolbar o Tabs en la parte superior.
+            - android:id="@+id/appBarLayout": Identificador del AppBarLayout.
+            - android:layout_width="match_parent": Ocupa todo el ancho disponible.
+            - android:layout_height="wrap_content": Su altura se ajusta al contenido.
+            - app:layout_constraintTop_toTopOf="parent": Se posiciona en la parte superior del ConstraintLayout.
+        -->
+
+        <!-- Barra de herramientas (Toolbar) -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/header_gradient"
+            app:titleTextColor="@color/white"/>
+
+        <!--
+            Toolbar: Barra de herramientas superior.
+            - android:id="@+id/toolBar": Identificador de la Toolbar.
+            - android:layout_width="match_parent": Ocupa todo el ancho disponible.
+            - android:layout_height="?attr/actionBarSize": Su altura se ajusta al tamaño estándar de la ActionBar.
+            - android:background="@drawable/header_gradient": Aplica un fondo con degradado.
+            - app:titleTextColor="@color/white": Establece el color del título en blanco.
+        -->
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Contenedor principal para la actividad -->
+    <FrameLayout
+        android:id="@+id/activityContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"/>
+
+    <!--
+        FrameLayout: Contenedor donde se cargarán las diferentes actividades o fragmentos.
+        - android:id="@+id/activityContainer": Identificador del FrameLayout.
+        - android:layout_width="match_parent": Ocupa todo el ancho disponible.
+        - android:layout_height="0dp": Su altura es cero inicialmente, pero se expande con las restricciones.
+        - android:background="@color/white": Fondo blanco para el contenedor.
+        - app:layout_constraintBottom_toBottomOf="parent": Su parte inferior se alinea con el borde inferior del ConstraintLayout.
+        - app:layout_constraintTop_toBottomOf="@+id/appBarLayout": Su parte superior se alinea con la parte inferior del AppBarLayout.
+    -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
